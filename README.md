@@ -37,14 +37,6 @@
 
 ---
 
-## 🌈 Screenshots
-
-| Web View | Android App |
-|----------|-------------|
-| ![Web Screenshot](#) | ![Android Screenshot](#) |
-
----
-
 ## 🔐 Setup Instructions
 
 1. **Clone the project**:
