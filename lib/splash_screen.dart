@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:diana/animation.dart';
 import 'package:diana/chat_screen.dart';
 import 'package:diana/login.dart';

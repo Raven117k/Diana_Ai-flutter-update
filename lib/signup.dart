@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'chat_screen.dart'; // replace with actual path if different
 import 'glowing_logo_loop.dart'; // ensure this file exists
