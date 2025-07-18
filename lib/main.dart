@@ -90,7 +90,7 @@ class _ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
     if (Theme.of(context).platform == TargetPlatform.android) {
       await _flutterTts.setSpeechRate(0.5); // fix for Android 2x speed
     } else {
-      await _flutterTts.setSpeechRate(0.95); // fine for web
+      await _flutterTts.setSpeechRate(0.6); // fine for web
     }
 
     await _flutterTts.setPitch(1.3);
