@@ -1,5 +1,6 @@
 import 'package:diana/animation.dart';
 import 'package:diana/chat_screen.dart';
+import 'package:diana/login.dart';
 import 'package:flutter/material.dart';
 
 
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen>
       Navigator.of(context).pushReplacement(
         PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 800),
-          pageBuilder: (_, __, ___) => const ChatScreen(),
+          pageBuilder: (_, __, ___) => const LoginPage(),
           transitionsBuilder: (_, animation, __, child) {
             return FadeTransition(
               opacity: animation,
