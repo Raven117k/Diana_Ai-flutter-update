@@ -1,6 +1,7 @@
-import 'package:diana/brain_assemble_animation.dart';
+import 'package:diana/animation.dart';
+import 'package:diana/chat_screen.dart';
 import 'package:flutter/material.dart';
-import 'main.dart'; 
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
