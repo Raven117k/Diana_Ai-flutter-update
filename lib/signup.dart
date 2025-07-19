@@ -1,8 +1,6 @@
-// ignore_for_file: unused_import
-
+import 'package:diana/login.dart';
 import 'package:flutter/material.dart';
-import 'chat_screen.dart'; // replace with actual path if different
-import 'glowing_logo_loop.dart'; // ensure this file exists
+import 'glowing_logo_loop.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -133,6 +131,18 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                 ),
                 const SizedBox(height: 16),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (_) => const LoginPage()),
+                      );
+                  },
+                  child: const Text(
+                    "Already have Account? Log in here!",
+                    style: TextStyle(color: Colors.blueAccent),
+                  ),
+                ),
               ],
             ),
           ),

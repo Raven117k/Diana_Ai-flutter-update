@@ -1,17 +1,15 @@
-import 'package:diana/forgot_password.dart';
-import 'package:diana/signup.dart';
+import 'package:diana/login.dart';
 import 'package:flutter/material.dart';
-import 'chat_screen.dart';
 import 'glowing_logo_loop.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class PasswordPage extends StatefulWidget {
+  const PasswordPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<PasswordPage> createState() => _PasswordPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _PasswordPageState extends State<PasswordPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   bool obscurePassword = true;
@@ -33,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "Log-in to Diana",
+                  "Reset your Password",
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -73,48 +71,9 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
 
                 // Password Field
-                TextField(
-                  controller: passwordController,
-                  obscureText: obscurePassword,
-                  style: const TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                    labelText: "Password",
-                    labelStyle: const TextStyle(color: Colors.white54),
-                    prefixIcon: const Icon(
-                      Icons.lock,
-                      color: Colors.blueAccent,
-                    ),
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                        obscurePassword
-                            ? Icons.visibility_off
-                            : Icons.visibility,
-                        color: Colors.grey,
-                      ),
-                      onPressed: () {
-                        setState(() => obscurePassword = !obscurePassword);
-                      },
-                    ),
-                    filled: true,
-                    fillColor: Colors.grey[900],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14),
-                      borderSide: const BorderSide(color: Colors.white12),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14),
-                      borderSide: const BorderSide(color: Colors.white12),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14),
-                      borderSide: const BorderSide(color: Colors.blueAccent),
-                    ),
-                  ),
-                ),
-
                 const SizedBox(height: 30),
 
-                // Login Button
+                // Password Button
                 SizedBox(
                   width: double.infinity,
                   height: 50,
@@ -127,41 +86,21 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     onPressed: () {
                       // 💙 You can add auth check here if needed
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (_) => const ChatScreen()),
-                      );
                     },
                     icon: const Icon(Icons.login, color: Colors.white),
-                    label: const Text("Login", style: TextStyle(fontSize: 16)),
+                    label: const Text("Submit", style: TextStyle(fontSize: 16)),
                   ),
                 ),
-
                 const SizedBox(height: 16),
-
                 TextButton(
                   onPressed: () {
                     Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (_) => const PasswordPage()),
+                        MaterialPageRoute(builder: (_) => const LoginPage()),
                       );
                   },
                   child: const Text(
-                    "Forgot Password?",
-                    style: TextStyle(color: Colors.white38),
-                  ),
-                ),
-                const SizedBox(height: 16),
-
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (_) => const SignupPage()),
-                      );
-                  },
-                  child: const Text(
-                    "Don't have an Account? Create one!",
+                    "Already have Account? Log in here!",
                     style: TextStyle(color: Colors.blueAccent),
                   ),
                 ),
